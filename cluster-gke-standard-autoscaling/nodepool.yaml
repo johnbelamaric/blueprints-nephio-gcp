@@ -4,11 +4,11 @@ metadata:
   name: nephio-nodepool
   namespace: config-control
   annotations:
-    cnrm.cloud.google.com/project-id: example
+    cnrm.cloud.google.com/project-id: example # kpt-set: ${project-id}
 spec:
-  location: us-central1-c
+  location: example # kpt-set: ${zone}
   autoscaling:
     minNodeCount: 4
     maxNodeCount: 10
   clusterRef:
-    name: nephio
+    name: example

@@ -3,12 +3,12 @@ kind: ContainerCluster
 metadata:
   annotations:
     cnrm.cloud.google.com/remove-default-node-pool: "true"
-    cnrm.cloud.google.com/project-id: example
-  name: nephio
+    cnrm.cloud.google.com/project-id: example # kpt-set: ${project-id}
+  name: example
   namespace: config-control
 spec:
   description: Nephio Management Cluster
-  location: us-central1-c
+  location: example # kpt-set: ${zone}
   initialNodeCount: 1
   workloadIdentityConfig:
     workloadPool: example.svc.id.goog # kpt-set: ${project-id}.svc.id.goog
