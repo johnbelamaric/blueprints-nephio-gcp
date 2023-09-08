@@ -19,7 +19,8 @@ spec:
         syncBranch: main
         policyDir: /
         syncRev: HEAD
-        secretType: none
+        secretType: gcpserviceaccount
+        gcpServiceAccountEmail: nephio-config-sync@example.iam.gserviceaccount.com # kpt-set: nephio-config-sync@${project-id}.iam.gserviceaccount.com
 ---
 apiVersion: gkehub.cnrm.cloud.google.com/v1beta1
 kind: GKEHubFeature
