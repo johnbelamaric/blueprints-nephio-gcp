@@ -11,13 +11,10 @@ replacements:
     fieldPath: data.name
   targets:
   - select:
-      kind: ContainerCluster
+      kind: ConfigMap
+      name: setters
     fieldPaths:
-    - metadata.name
-  - select:
-      kind: ContainerNodePool
-    fieldPaths:
-    - spec.clusterRef.name
+    - data.name
 - source:
     kind: ConfigMap
     name: gcp-context

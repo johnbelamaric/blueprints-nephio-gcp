@@ -4,7 +4,7 @@ metadata:
   annotations:
     cnrm.cloud.google.com/remove-default-node-pool: "true"
     cnrm.cloud.google.com/project-id: example # kpt-set: ${project-id}
-  name: example
+  name: example # kpt-set: ${name}
   namespace: config-control
 spec:
   description: Nephio Management Cluster

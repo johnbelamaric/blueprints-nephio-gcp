@@ -1,7 +1,7 @@
 apiVersion: container.cnrm.cloud.google.com/v1beta1
 kind: ContainerNodePool
 metadata:
-  name: nephio-nodepool
+  name: example-nodepool # kpt-set: ${name}-nodepool
   namespace: config-control
   annotations:
     cnrm.cloud.google.com/project-id: example # kpt-set: ${project-id}
@@ -11,4 +11,4 @@ spec:
     minNodeCount: 4
     maxNodeCount: 10
   clusterRef:
-    name: example
+    name: example # kpt-set: ${name}
