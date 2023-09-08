@@ -6,7 +6,7 @@ metadata:
   annotations:
     cnrm.cloud.google.com/project-id: example # kpt-set: ${project-id}
 spec:
-  location: example # kpt-set: ${zone}
+  location: example # kpt-set: ${location}
   autoscaling:
     minNodeCount: 4
     maxNodeCount: 10

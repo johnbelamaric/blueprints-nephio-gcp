@@ -31,10 +31,10 @@ replacements:
 - source:
     kind: ConfigMap
     name: gcp-context
-    fieldPath: data.zone
+    fieldPath: data.location
   targets:
   - select:
       kind: ConfigMap
       name: setters
     fieldPaths:
-    - data.zone
+    - data.location

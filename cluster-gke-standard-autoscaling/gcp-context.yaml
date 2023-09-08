@@ -7,4 +7,4 @@ metadata:
     kpt.dev/config-injection: required
 data:
   project-id: example
-  zone: example
+  location: example

@@ -8,7 +8,7 @@ metadata:
   namespace: config-control
 spec:
   description: Nephio Management Cluster
-  location: example # kpt-set: ${zone}
+  location: example # kpt-set: ${location}
   initialNodeCount: 1
   workloadIdentityConfig:
     workloadPool: example.svc.id.goog # kpt-set: ${project-id}.svc.id.goog

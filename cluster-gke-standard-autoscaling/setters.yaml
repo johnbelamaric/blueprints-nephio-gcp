@@ -6,4 +6,4 @@ metadata:
     config.kubernetes.io/local-config: "true"
 data:
   project-id: example
-  zone: example
+  location: example
