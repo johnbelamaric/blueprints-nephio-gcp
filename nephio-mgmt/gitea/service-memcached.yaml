@@ -15,7 +15,6 @@ spec:
     - name: memcache
       port: 11211
       targetPort: memcache
-      nodePort: null
   selector:
     app.kubernetes.io/name: memcached
     app.kubernetes.io/instance: gitea

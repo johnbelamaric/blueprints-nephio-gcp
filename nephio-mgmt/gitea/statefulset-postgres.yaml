@@ -30,7 +30,6 @@ spec:
     spec:
       serviceAccountName: default
       affinity:
-        podAffinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
             - podAffinityTerm:
@@ -41,7 +40,6 @@ spec:
                     app.kubernetes.io/component: primary
                 topologyKey: kubernetes.io/hostname
               weight: 1
-        nodeAffinity:
       securityContext:
         fsGroup: 1001
       hostNetwork: false
