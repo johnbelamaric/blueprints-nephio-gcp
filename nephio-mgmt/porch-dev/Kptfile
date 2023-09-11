@@ -1,0 +1,20 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: porch-dev
+upstream:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/nephio-example-packages
+    directory: /porch-dev
+    ref: v4
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/nephio-example-packages
+    directory: /porch-dev
+    ref: porch-dev/v4
+    commit: 6b3f0c9e8a629627de3984cce9fb08d04bdc0ea4
+info:
+  description: porch dev package

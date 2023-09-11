@@ -1,0 +1,16 @@
+apiVersion: config.porch.kpt.dev/v1alpha1
+kind: Repository
+metadata:
+  name: blueprints-nephio-gcp
+  namespace: default
+  labels:
+    kpt.dev/repository-access: read-only
+    kpt.dev/repository-content: external-blueprints
+spec:
+  content: Package
+  deployment: false
+  git:
+    branch: main
+    directory: /
+    repo: https://github.com/johnbelamaric/blueprints-nephio-gcp.git
+  type: git
