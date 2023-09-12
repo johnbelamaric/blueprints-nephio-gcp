@@ -4,7 +4,6 @@ metadata: # kpt-merge: /rawtopologies.topo.nephio.org
   annotations:
     controller-gen.kubebuilder.io/version: v0.9.2
     internal.kpt.dev/upstream-identifier: 'apiextensions.k8s.io|CustomResourceDefinition|default|rawtopologies.topo.nephio.org'
-  creationTimestamp: null
   name: rawtopologies.topo.nephio.org
 spec:
   group: topo.nephio.org

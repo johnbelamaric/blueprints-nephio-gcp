@@ -4,7 +4,6 @@ metadata: # kpt-merge: /ipprefixes.ipam.resource.nephio.org
   annotations:
     controller-gen.kubebuilder.io/version: v0.9.2
     internal.kpt.dev/upstream-identifier: 'apiextensions.k8s.io|CustomResourceDefinition|default|ipprefixes.ipam.resource.nephio.org'
-  creationTimestamp: null
   name: ipprefixes.ipam.resource.nephio.org
 spec:
   group: ipam.resource.nephio.org

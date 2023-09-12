@@ -4,7 +4,6 @@ metadata: # kpt-merge: /repositories.config.porch.kpt.dev
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
     internal.kpt.dev/upstream-identifier: 'apiextensions.k8s.io|CustomResourceDefinition|default|repositories.config.porch.kpt.dev'
-  creationTimestamp: null
   name: repositories.config.porch.kpt.dev
 spec:
   group: config.porch.kpt.dev
@@ -265,9 +264,3 @@ spec:
     storage: true
     subresources:
       status: {}
-status:
-  acceptedNames:
-    kind: ""
-    plural: ""
-  conditions: []
-  storedVersions: []

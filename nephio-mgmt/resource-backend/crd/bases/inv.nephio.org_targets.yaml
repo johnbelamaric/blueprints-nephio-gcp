@@ -4,7 +4,6 @@ metadata: # kpt-merge: /targets.inv.nephio.org
   annotations:
     controller-gen.kubebuilder.io/version: v0.9.2
     internal.kpt.dev/upstream-identifier: 'apiextensions.k8s.io|CustomResourceDefinition|default|targets.inv.nephio.org'
-  creationTimestamp: null
   name: targets.inv.nephio.org
 spec:
   group: inv.nephio.org

@@ -7,20 +7,20 @@ upstream:
   git:
     repo: https://github.com/nephio-project/nephio-example-packages
     directory: /porch-dev
-    ref: v4
+    ref: main
   updateStrategy: resource-merge
 upstreamLock:
   type: git
   git:
     repo: https://github.com/nephio-project/nephio-example-packages
     directory: /porch-dev
-    ref: porch-dev/v4
-    commit: 6b3f0c9e8a629627de3984cce9fb08d04bdc0ea4
+    ref: main
+    commit: 913c67b5cbea36cab270e6e634d47bb127e401b5
 info:
   description: porch dev package
 pipeline:
   mutators:
-  - image: gcr.io/kpt-fn/apply-replacements:v0.1.1
-    configPath: apply-replacements.yaml
-  - image: gcr.io/kpt-fn/apply-setters:v0.2.0
-    configPath: setters.yaml
+    - image: gcr.io/kpt-fn/apply-replacements:v0.1.1
+      configPath: apply-replacements.yaml
+    - image: gcr.io/kpt-fn/apply-setters:v0.2.0
+      configPath: setters.yaml
