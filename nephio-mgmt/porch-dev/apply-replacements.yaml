@@ -7,6 +7,16 @@ metadata:
 replacements:
 - source:
     kind: ConfigMap
+    name: kptfile.kpt.dev
+    fieldPath: data.name
+  targets:
+  - select:
+      kind: ConfigMap
+      name: setters
+    fieldPaths:
+    - data.name
+- source:
+    kind: ConfigMap
     name: gcp-context
     fieldPath: data.project-id
   targets:

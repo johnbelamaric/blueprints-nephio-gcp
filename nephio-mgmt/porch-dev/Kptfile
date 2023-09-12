@@ -18,3 +18,9 @@ upstreamLock:
     commit: 6b3f0c9e8a629627de3984cce9fb08d04bdc0ea4
 info:
   description: porch dev package
+pipeline:
+  mutators:
+  - image: gcr.io/kpt-fn/apply-replacements:v0.1.1
+    configPath: apply-replacements.yaml
+  - image: gcr.io/kpt-fn/apply-setters:v0.2.0
+    configPath: setters.yaml
