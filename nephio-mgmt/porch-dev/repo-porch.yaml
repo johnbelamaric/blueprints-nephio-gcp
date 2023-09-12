@@ -20,3 +20,19 @@ spec:
     secretRef:
       name: nephio-auth
   type: git
+---
+apiVersion: config.porch.kpt.dev/v1alpha1
+kind: Repository
+metadata:
+  name: config-control
+  namespace: default
+spec:
+  content: Package
+  deployment: true
+  git:
+    branch: main
+    directory: /
+    repo: https://source.developers.google.com/p/example/r/config-control # kpt-set: https://source.developers.google.com/p/${project-id}/r/config-control
+    secretRef:
+      name: nephio-auth
+  type: git
