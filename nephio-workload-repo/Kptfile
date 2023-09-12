@@ -8,7 +8,7 @@ info:
   description: Uses KCC to create a Cloud Source Repository
 pipeline:
   mutators:
-    - image: gcr.io/kpt-fn/apply-replacements:v0.1.1
-      configPath: apply-replacements.yaml
-    - image: gcr.io/kpt-fn/apply-setters:v0.2.0
-      configPath: setters.yaml
+  - image: gcr.io/kpt-fn/apply-replacements:v0.1.1
+    configPath: apply-replacements.yaml
+  - image: gcr.io/kpt-fn/apply-setters:v0.2.0
+    configPath: setters.yaml
