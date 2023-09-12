@@ -28,3 +28,29 @@ replacements:
     fieldPaths:
     - metadata.name
     - spec.clusterName
+  - select:
+      kind: ConfigMap
+      name: setters
+    fieldPaths:
+    - data.name
+    - data.cluster-name
+- source:
+    kind: ConfigMap
+    name: gcp-context
+    fieldPath: data.project-id
+  targets:
+  - select:
+      kind: ConfigMap
+      name: setters
+    fieldPaths:
+    - data.project-id
+- source:
+    kind: ConfigMap
+    name: gcp-context
+    fieldPath: data.location
+  targets:
+  - select:
+      kind: ConfigMap
+      name: setters
+    fieldPaths:
+    - data.location

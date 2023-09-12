@@ -10,8 +10,8 @@ spec:
     repo: blueprints-nephio-gcp
     revision: main
   downstream:
-    package: example-cluster
-    repo: nephio
+    package: example
+    repo: config-control
   injectors:
   - kind: ConfigMap
     name: gcp-context
