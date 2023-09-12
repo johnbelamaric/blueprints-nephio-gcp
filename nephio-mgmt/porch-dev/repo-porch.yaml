@@ -1,0 +1,15 @@
+apiVersion: config.porch.kpt.dev/v1alpha1
+kind: Repository
+metadata:
+  name: nephio
+  namespace: default
+spec:
+  content: Package
+  deployment: true
+  git:
+    branch: main
+    directory: /
+    repo: https://source.developers.google.com/p/example/r/nephio # kpt-set: https://source.developers.google.com/p/${project-id}/r/nephio
+    auth: gcpserviceaccount
+    gcpServiceAccountEmail: nephio-porch@example.iam.gserviceaccount.com # kpt-set: nephio-porch@${project-id}.iam.gserviceaccount.com
+  type: git
