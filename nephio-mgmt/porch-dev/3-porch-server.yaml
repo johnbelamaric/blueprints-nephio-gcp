@@ -18,6 +18,7 @@ metadata: # kpt-merge: porch-system/porch-server
   namespace: porch-system
   annotations:
     internal.kpt.dev/upstream-identifier: '|ServiceAccount|porch-system|porch-server'
+    iam.gke.io/gcp-service-account: nephio-porch@example.iam.gserviceaccount.com # kpt-set: nephio-porch@${project-id}.iam.gserviceaccount.com
 ---
 apiVersion: apps/v1
 kind: Deployment
