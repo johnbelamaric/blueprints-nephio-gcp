@@ -1,0 +1,22 @@
+apiVersion: config.porch.kpt.dev/v1alpha1
+kind: PackageVariant
+metadata:
+  name: example-cluster
+spec:
+  annotations:
+    approval.nephio.org/policy: initial
+  upstream:
+    package: cluster-gke-standard-autoscaling
+    repo: blueprints-nephio-gcp
+    revision: main
+  downstream:
+    package: example-cluster
+    repo: nephio
+  injectors:
+  - kind: ConfigMap
+    name: gcp-context
+  pipeline:
+    mutators:
+    - image: gcr.io/kpt-fn/set-annotations:v0.1.4
+      configMap:
+        nephio.org/cluster-name: example
