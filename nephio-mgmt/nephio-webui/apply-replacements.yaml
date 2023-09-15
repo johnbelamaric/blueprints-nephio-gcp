@@ -15,12 +15,3 @@ replacements:
     fieldPaths:
     - spec.rules.0.host
     - spec.tls.0.hosts.0
-- source:
-    kind: GenConfigMap
-    name: gen-app-config
-    fieldPath: params.port
-  targets:
-  - select:
-      kind: Ingress
-    fieldPaths:
-    - spec.rules.0.http.paths.0.backend.service.port.number

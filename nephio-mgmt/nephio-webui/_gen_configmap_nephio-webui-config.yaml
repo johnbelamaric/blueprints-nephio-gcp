@@ -6,7 +6,7 @@ metadata:
 data:
   app-config.nephio.yaml: |
     app:
-      baseUrl: https://localhost:7007
+      baseUrl: https://webui.nephio.example.com:443
 
     # Backstage backend configuration
     backend:
@@ -15,8 +15,10 @@ data:
       # reachable not just from within the backend host, but from all of your
       # callers. When its value is "http://localhost:7007", it's strictly private
       # and can't be reached by others.
-      baseUrl: https://localhost:7007
+      baseUrl: https://webui.nephio.example.com:443
 
+      # Port here should remain 7007, that is what is used in the Service. The port
+      # in the URLs is for client access.
       listen:
         port: 7007
 

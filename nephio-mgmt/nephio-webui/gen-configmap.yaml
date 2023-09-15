@@ -10,8 +10,8 @@ configMapMetadata:
   namespace: nephio-webui
 params:
   scheme: https
-  hostname: localhost
-  port: "7007"
+  hostname: webui.nephio.example.com
+  port: "443"
   resourcesNamespace: default
   authProvider: google
 data:
@@ -30,8 +30,10 @@ data:
       # and can't be reached by others.
       baseUrl: {{.scheme}}://{{.hostname}}:{{.port}}
 
+      # Port here should remain 7007, that is what is used in the Service. The port
+      # in the URLs is for client access.
       listen:
-        port: {{.port}}
+        port: 7007
 
       # Content Security Policy
       csp:
