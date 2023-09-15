@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     cert-manager.io/cluster-issuer: nephio-cluster-issuer
+    networking.gke.io/v1beta1.FrontendConfig: nephio-webui
   name: nephio-webui
   namespace: nephio-webui
 spec:
