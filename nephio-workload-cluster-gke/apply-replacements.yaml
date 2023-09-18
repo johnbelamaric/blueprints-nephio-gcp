@@ -54,3 +54,12 @@ replacements:
       name: setters
     fieldPaths:
     - data.location
+- source:
+    kind: ConfigMap
+    name: gcp-context
+    fieldPath: metadata.annotations.[kpt.dev/injected-resource]
+  targets:
+  - select:
+      kind: PackageVariant
+    fieldPaths:
+    - spec.injectors.0.name

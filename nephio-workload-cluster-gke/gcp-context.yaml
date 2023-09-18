@@ -5,6 +5,7 @@ metadata:
   annotations:
     config.kubernetes.io/local-config: "true"
     kpt.dev/config-injection: required
+    kpt.dev/injected-resource: example
 data:
   project-id: example
   location: example
