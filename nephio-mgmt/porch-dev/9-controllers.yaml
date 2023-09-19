@@ -18,6 +18,7 @@ metadata: # kpt-merge: porch-system/porch-controllers
   namespace: porch-system
   annotations:
     internal.kpt.dev/upstream-identifier: '|ServiceAccount|porch-system|porch-controllers'
+    iam.gke.io/gcp-service-account: nephio-porch@example.iam.gserviceaccount.com # kpt-set: nephio-porch@${project-id}.iam.gserviceaccount.com
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -49,4 +50,6 @@ spec:
         - name: ENABLE_PACKAGEVARIANTSETS
           value: "true"
         - name: ENABLE_PACKAGEVARIANTS
+          value: "true"
+        - name: ENABLE_FLEETSYNCS
           value: "true"
