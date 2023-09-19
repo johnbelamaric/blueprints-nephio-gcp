@@ -63,6 +63,7 @@ rules:
   - get
   - list
   - watch
+  - update
 - apiGroups:
   - config.porch.kpt.dev
   resources:
